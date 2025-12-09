@@ -1,6 +1,8 @@
-# SQL Emissions Dashboard
+# SQL United States Emissions Dashboard
 
-SQL End-to-End Data Project In Databricks
+SQL End-to-End Data Project In Databricks.
+
+This project analyzes emissions data using SQL to uncover trends and insights across different states and counties. The results are organized to support a dashboard that helps visualize total emissions and identify key areas for environmental focus.
 
 # Finished United States Emissions Dashboard 
 
@@ -10,7 +12,7 @@ This data was collected by the EPA (Environmental Protection Agency) in 2023
 
 # Project Skills
 
-
+SQL querying & data manipulation │ Data analysis & aggregation │ Database design & schema understanding │ Data cleaning & preprocessing │ Reporting & dashboard insights
 
 # Business Task
 
@@ -23,7 +25,7 @@ Develop a dashboard that visualizes U.S. emissions data, highlighting where emis
 
 • Which states and counties produce the most emissions?
 
-• How many emissions we have on a per-person, per-area basis?
+• How many emissions do we have on a per-person, per-area basis?
 
 
 # 2. Prepare
@@ -235,6 +237,7 @@ Afterwards, I spent some time cleaning up the labels and titles throughout the d
 
 <img width="1363" height="831" alt="Screenshot 2025-12-09 at 5 06 36 PM" src="https://github.com/user-attachments/assets/2fa66dbe-6485-4f48-81cf-331833d6e959" />
 
+# 6. Act
 
 [Emissions Dashboard 2025-12-09 22_03.pdf](https://github.com/user-attachments/files/24064711/Emissions.Dashboard.2025-12-09.22_03.pdf)
 
