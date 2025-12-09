@@ -1,0 +1,5 @@
+SELECT latitude,
+longitude, 
+`GHG emissions mtons CO2e` as Emissions
+
+From emissions.default.emissions_data
