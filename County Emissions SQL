@@ -4,6 +4,6 @@ SELECT
     CAST(
         REPLACE(`GHG emissions mtons CO2e`, ',', '') 
         AS DOUBLE) as Total_Emissions
-FROM emissions_data
+FROM emissions.default.emissions_data
 ORDER BY Total_Emissions DESC
 LIMIT 10
