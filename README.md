@@ -45,7 +45,7 @@ I then opened the SQL Editor and ran a simple query to view the table:
 SELECT * 
 FROM emissions.default.emissions_data;
 
-From this output, I identified the column names I needed and wrote a more targeted query:
+From this output, I identified the column names I needed and wrote a more targeted querys.
 
 # 4. Analyze
 
