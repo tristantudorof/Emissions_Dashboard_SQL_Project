@@ -30,7 +30,7 @@ Develop a dashboard that visualizes U.S. emissions data, highlighting where emis
 
 # 2. Prepare
 
-Starting Dataset: [Emissions data link](https://github.com/AlexTheAnalyst/DatabricksSeries/blob/main/Emissions_Data_2023.csv) raw (CSV FILE) dataset containing detailed emissions data.
+Starting Dataset: [Emissions data link](https://github.com/AlexTheAnalyst/DatabricksSeries/blob/main/Emissions_Data_2023.csv) raw (CSV file) dataset containing detailed emissions data.
 
 To begin, I uploaded the CSV file to Databricks by creating a new catalog named emissions. Within the catalog’s default schema, I created a new table and imported the Emissions 2023 CSV, saving it as emissions_data for analysis.
 
