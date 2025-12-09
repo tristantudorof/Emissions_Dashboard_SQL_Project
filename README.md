@@ -53,8 +53,6 @@ From this output, I identified the column names I needed and wrote a more target
 
 In the SQL Editor
 
-sql'''
-
 SELECT 
     latitude,
     longitude,
@@ -91,17 +89,14 @@ SELECT
     county_state_name,
     population,
     CAST(
-        REPLACE(`GHG emissions mtons CO2e`, ',', '') 
-        AS DOUBLE
-    ) 
-    / NULLIF(
+        REPLACE(`GHG emissions mtons CO2e`, ',', '') AS DOUBLE
+    ) / NULLIF(
         CAST(
-            REPLACE(population, ',', '') 
-            AS DOUBLE
-        ), 
-        0
+            REPLACE(population, ',', '') AS DOUBLE
+        ), 0
     ) AS Emissions_per_person
 FROM emissions_data;
+
 
 <img width="655" height="703" alt="Screenshot 2025-12-09 at 2 20 33 PM" src="https://github.com/user-attachments/assets/8d5d9bf9-5058-4e44-a067-0fa0a8ab13df" />
 
