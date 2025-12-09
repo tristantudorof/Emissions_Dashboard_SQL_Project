@@ -54,9 +54,13 @@ From this output, I identified the column names I needed and wrote a more target
 In the SQL Editor
 
 SELECT 
+
     latitude,
+    
     longitude,
+    
     `GHG emissions mtons CO2e` AS Emissions
+    
 FROM emissions.default.emissions_data;
 
 
@@ -85,9 +89,9 @@ FROM emissions.default.emissions_data
 That returned an error because the data is showing as a string value 
 I need to remove the thousands separator (comma) from the string before casting to DOUBLE. I Use the replace function to do this.
 
-'''sql 
 
 SELECT 
+
     county_state_name,
     population,
     CAST(
@@ -97,6 +101,7 @@ SELECT
             REPLACE(population, ',', '') AS DOUBLE
         ), 0
     ) AS Emissions_per_person
+    
 FROM emissions_data;
 
 
@@ -106,6 +111,7 @@ To analyze emissions per person, I ordered the results by the calculated Emissio
 
 
 SELECT 
+
     county_state_name,
     population,
     CAST(
@@ -119,8 +125,11 @@ SELECT
         ), 
         0
     ) AS Emissions_per_person
+    
 FROM emissions_data
+
 ORDER BY Emissions_per_person DESC
+
 LIMIT 10
 
 <img width="607" height="783" alt="Screenshot 2025-12-09 at 2 24 53 PM" src="https://github.com/user-attachments/assets/0fdf051e-9a86-4948-a5e2-08e18209f96f" />
@@ -144,14 +153,19 @@ Because each state appears multiple times in the dataset, I added a GROUP BY on 
 My query ended up looking like this, 
 
 SELECT 
+
     state_abbr,
     SUM(CAST(
         REPLACE(`GHG emissions mtons CO2e`, ',', '') 
         AS DOUBLE
      ) ) AS Total_Emissions
+     
 FROM emissions_data
+
 GROUP BY state_abbr
+
 ORDER BY Total_Emissions DESC
+
 LIMIT 10
 
 <img width="475" height="743" alt="Screenshot 2025-12-09 at 3 02 22 PM" src="https://github.com/user-attachments/assets/e452c8f7-1480-4e4e-8639-6da73dffb251" />
@@ -169,34 +183,62 @@ Now I’m going to return to the SQL Editor, open a new query, and enter the fol
 This query uses a CTE to identify the top 10 highest-emitting states by summing their total emissions. It then calculates what percentage these top 10 states contribute to the overall U.S. emissions.
 
 WITH top10 AS (
+
     SELECT 
+    
         state_abbr,
+        
         SUM(
+        
             CAST(
+            
                 REPLACE(`GHG emissions mtons CO2e`, ',', '') 
+                
                 AS DOUBLE
+                
             )
+            
         ) AS Total_Emissions
+        
     FROM emissions_data
+    
     GROUP BY state_abbr
+    
     ORDER BY Total_Emissions DESC
+    
     LIMIT 10
 )
+
 SELECT 
+
     SUM(Total_Emissions) AS Top10_Emissions,
+    
     (
+    
         SUM(Total_Emissions) /
+        
         (
+        
             SELECT 
+            
                 SUM(
+                
                     CAST(
+                    
                         REPLACE(`GHG emissions mtons CO2e`, ',', '') 
+                        
                         AS DOUBLE
+                        
                     )
+                    
                 )
+                
             FROM emissions_data
+            
         )
+        
     ) * 100 AS Top10_Percentage
+    
 FROM top10;
 
 <img width="742" height="623" alt="Screenshot 2025-12-09 at 4 22 12 PM" src="https://github.com/user-attachments/assets/51e6811a-6b10-46ce-9e92-92caa2c8c27b" />
@@ -212,13 +254,21 @@ I changed the description to read These 10 States account for 50.8%  of all emis
 Next, I want to create a bar chart showing the top 10 counties in the U.S. by total emissions. To do this, I open a new query in the SQL Editor and use a previous query as a starting point. Since I’m only interested in total emissions, I run the following query:
 
 SELECT 
+
     county_state_name,
+    
     population,
+    
     CAST(
+    
         REPLACE(`GHG emissions mtons CO2e`, ',', '') 
+        
         AS DOUBLE) as Total_Emissions
+        
 FROM emissions_data
+
 ORDER BY Total_Emissions DESC
+
 LIMIT 10
 
 <img width="594" height="748" alt="Screenshot 2025-12-09 at 4 35 44 PM" src="https://github.com/user-attachments/assets/632e2e8b-59bd-4f6e-b3bd-97ae47b65a85" />
