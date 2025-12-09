@@ -53,6 +53,8 @@ From this output, I identified the column names I needed and wrote a more target
 
 In the SQL Editor
 
+sql'''
+
 SELECT 
     latitude,
     longitude,
