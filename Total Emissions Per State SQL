@@ -1,0 +1,10 @@
+SELECT 
+    state_abbr,
+    SUM(CAST(
+        REPLACE(`GHG emissions mtons CO2e`, ',', '') 
+        AS DOUBLE
+     ) ) AS Total_Emissions
+FROM emissions.default.emissions_data
+GROUP BY state_abbr
+ORDER BY Total_Emissions DESC
+LIMIT 10
