@@ -10,6 +10,8 @@ This data was collected by the EPA (Environmental Protection Agency) in 2023
 
 <img width="1363" height="831" alt="Screenshot 2025-12-09 at 5 06 36 PM" src="https://github.com/user-attachments/assets/2fa66dbe-6485-4f48-81cf-331833d6e959" />
 
+[Emissions Dashboard.pdf](https://github.com/user-attachments/files/24064711/Emissions.Dashboard.2025-12-09.22_03.pdf)
+
 # Project Skills
 
 SQL querying & data manipulation │ Data analysis & aggregation │ Database design & schema understanding │ Data cleaning & preprocessing │ Reporting & dashboard insights
@@ -237,9 +239,9 @@ Afterwards, I spent some time cleaning up the labels and titles throughout the d
 
 <img width="1363" height="831" alt="Screenshot 2025-12-09 at 5 06 36 PM" src="https://github.com/user-attachments/assets/2fa66dbe-6485-4f48-81cf-331833d6e959" />
 
-# 6. Act
+[Emissions Dashboard.pdf](https://github.com/user-attachments/files/24064711/Emissions.Dashboard.2025-12-09.22_03.pdf)
 
-[Emissions Dashboard 2025-12-09 22_03.pdf](https://github.com/user-attachments/files/24064711/Emissions.Dashboard.2025-12-09.22_03.pdf)
+# 6. Act
 
 
 
