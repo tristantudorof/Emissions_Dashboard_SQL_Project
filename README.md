@@ -85,6 +85,8 @@ FROM emissions.default.emissions_data
 That returned an error because the data is showing as a string value 
 I need to remove the thousands separator (comma) from the string before casting to DOUBLE. I Use the replace function to do this.
 
+'''sql 
+
 SELECT 
     county_state_name,
     population,
