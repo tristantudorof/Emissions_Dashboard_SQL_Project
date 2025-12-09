@@ -2,6 +2,16 @@
 
 SQL End-to-End Data Project In Databricks
 
+# Finished United States Emissions Dashboard 
+
+This data was collected by the EPA (Environmental Protection Agency) in 2023
+
+<img width="1363" height="831" alt="Screenshot 2025-12-09 at 5 06 36 PM" src="https://github.com/user-attachments/assets/2fa66dbe-6485-4f48-81cf-331833d6e959" />
+
+# Project Skills
+
+
+
 # Business Task
 
 Develop a dashboard that visualizes U.S. emissions data, highlighting where emissions originate, where the most emissions are coming from, which states and counties contribute the most, and how much emissions we have in general on a per-person, per-area basis. The goal is to support better environmental decision-making by clearly showing emission patterns across regions and populations.
@@ -32,6 +42,8 @@ SELECT *
 FROM emissions.default.emissions_data;
 
 From this output, I identified the column names I needed and wrote a more targeted query:
+
+# 4. Analyze
 
 # Building The First Visual, Emissions Per Location Map
 
@@ -192,6 +204,7 @@ I changed the description to read These 10 States account for 50.8%  of all emis
 
 <img width="405" height="346" alt="Screenshot 2025-12-09 at 4 28 40 PM" src="https://github.com/user-attachments/assets/bae959b5-623c-400c-a5a7-6e0ee22e8c92" />
 
+# Total Emissions by mTon of CO2e Bar Chart
 
 Next, I want to create a bar chart showing the top 10 counties in the U.S. by total emissions. To do this, I open a new query in the SQL Editor and use a previous query as a starting point. Since I’m only interested in total emissions, I run the following query:
 
@@ -215,3 +228,15 @@ i then added the title Total Emissions by mTon of CO2e
 <img width="420" height="361" alt="Screenshot 2025-12-09 at 4 51 37 PM" src="https://github.com/user-attachments/assets/a7b9a35e-bb90-4477-8c2e-c12a2d8987bf" />
 
 Afterwards, I spent some time cleaning up the labels and titles throughout the dashboard for clarity and readability.
+
+# 5. Share 
+
+# Emissions Dashboard 
+
+<img width="1363" height="831" alt="Screenshot 2025-12-09 at 5 06 36 PM" src="https://github.com/user-attachments/assets/2fa66dbe-6485-4f48-81cf-331833d6e959" />
+
+
+[Emissions Dashboard 2025-12-09 22_03.pdf](https://github.com/user-attachments/files/24064711/Emissions.Dashboard.2025-12-09.22_03.pdf)
+
+
+
