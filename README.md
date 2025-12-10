@@ -27,7 +27,7 @@ Develop a dashboard that visualizes U.S. emissions data, highlighting where emis
 
 • Which states and counties produce the most emissions?
 
-• How many emissions do we have on a per-person, per-area basis?
+• What is the relationship between population size and per-person emissions?
 
 
 # 2. Prepare
@@ -292,5 +292,42 @@ Afterwards, I spent some time cleaning up the labels and titles throughout the d
 
 # 6. Act
 
+# 1. Where Are the Highest Emissions Concentrated?
 
+Geographic Distribution: The map shows emissions are heavily clustered in specific regions across the Continental US rather than evenly distributed.
 
+Regional Hotspots: Concentration appears strongest in industrial centers, major metropolitan areas, and energy-producing regions based on the map visualization.
+
+Overall Insight: Emissions follow predictable patterns tied to industrial activity, energy production, and large population centers, creating distinct geographic hotspots rather than uniform distribution.
+
+# 2. Which States and Counties Produce the Most Emissions?
+
+Top 3 Emitting States:
+
+Texas (TX): Highest total emissions — the clear leader
+Florida (FL): Second-highest but significantly below Texas
+Ohio (OH): Third-highest emitter
+
+County-Level Example:
+
+Barton County, MO: 3.65 emissions per person with a population of 12,080
+
+Overall Insight: These 10 states account for 50.8% of all Continental US emissions, showing extreme concentration. Texas dominates, while the top 10 collectively represent an outsized opportunity for targeted emission reduction efforts.
+
+# 3. Population Size and Per-Person Emissions Relationship
+   
+Large Population Centers (1M-10M): Cluster at the lowest per-capita emission rates — likely under 1-2 emissions per person due to shared infrastructure and density.
+
+Medium Counties (100K-1M): Show moderate efficiency with gradually improving per-capita rates as population increases.
+
+Small Counties (under 100K): Display the highest variation — some efficient, but many spike to 3-5+ emissions per person, especially rural and industrial counties like Barton County, MO at 3.65 per person.
+
+Overall Insight: A higher population equals lower emissions per person. Dense urban areas are the most efficient, while rural and industrial counties have significantly higher per-capita footprints. The relationship is inverse and clear — density drives efficiency through shared transit, infrastructure, and compact living.
+
+# Impact 
+
+This dashboard transforms raw EPA data into actionable intelligence, enabling data-driven strategies that focus resources on the highest impact geographies while understanding the efficiency advantages of scale and density. The 50.8% concentration creates a clear roadmap. Solve emissions in these 10 states, and you've addressed half the problem.
+
+# Thank You
+
+Thank you for your interest and time. Feel free to give your valuable suggestions and connect with me on [LinkedIn](https://www.linkedin.com/in/tristan-tudorof/)
